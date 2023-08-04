@@ -81,7 +81,7 @@ function ConvertFiles(obj)
                 targetPath = fullfile(currFileOutputFolder,currMFile.insideFunctions(n).name+".txt");
                 fid = fopen(targetPath,'wt');
                 for j=1:length(currMFile.insideFunctions(n).text)
-                    currentText = replace(currMFile.insideFunctions(n).text(j),"%","%%");
+                    currentText = replace(currMFile.insideFunctions(n).text(j),"%","%");
                     fprintf(fid, "%s", currentText);
                     fprintf(fid,"\n");
                 end
